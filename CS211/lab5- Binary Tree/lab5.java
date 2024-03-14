@@ -47,7 +47,7 @@ class BinaryTree {
     }
 }
 
-public class lab5Binary {
+public class lab5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the numbers to insert separated by commas: ");
