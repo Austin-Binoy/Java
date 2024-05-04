@@ -1,5 +1,3 @@
-
-
 import java.io.File;
 import java.util.Comparator;
 import java.util.LinkedList;
@@ -21,8 +19,8 @@ class QueueComparator implements Comparator<BinaryTree3> {
 
 public class part2 {
 	public static void main(String args[]) {
-		PriorityQueue <BinaryTree3> PQ = new PriorityQueue <BinaryTree3>();
-		File file = new File("C:\\Users\\austi\\OneDrive\\Desktop\\EnglishFrequencies.csv");
+		PriorityQueue<BinaryTree3> PQ = new PriorityQueue<BinaryTree3>(new QueueComparator());
+		File file = new File("C:\\Users\\austi\\OneDrive\\Documents\\UNI\\University\\CS211\\Lab 7\\EnglishFrequencies.csv");
 		int inputSize = 26288;
 		BinaryTree3[] btarray = new BinaryTree3[inputSize];
 		String[] input = new String[inputSize];

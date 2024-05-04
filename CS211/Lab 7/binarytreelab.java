@@ -8,7 +8,7 @@ public class binarytreelab {
         // import file
         TranslationTree mytree = new TranslationTree();
 
-        File file = new File("C:\\Users\\austi\\OneDrive\\Desktop\\EnglishSpanish.csv");
+        File file = new File("C:\\Users\\austi\\OneDrive\\Documents\\UNI\\University\\CS211\\Lab 7\\EnglishSpanish.csv");
         int inputSize = 28636;
         String[] input = new String[inputSize];
         String[] englishWords = new String[inputSize];
@@ -29,14 +29,12 @@ public class binarytreelab {
             System.err.println(e);
         }
 
-
-
         // Does not work as intended, midpoint insertion is not perfect
         mytree.insertMidpoints(englishWords, spanishWords, 0, inputSize - 1);
         System.out.println("Tree height: " + mytree.height());
         // mytree.printLevelByLevel();
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter text in English to translate to Spanish ");
+        System.out.print("Enter text in English to translate to Spanish: ");
         String inputString = sc.nextLine();
         sc.close();
 
@@ -94,7 +92,7 @@ class TranslationTree {
         }
     }
 
-    
+
     public int height() {
         return heightRecursive(root);
     }
@@ -119,8 +117,8 @@ class TranslationTree {
             }
         return current.english;
     }
-    public int avgsteps (int size) {
-        return steps/size;
+    public double avgsteps (int size) {
+        return steps/(double)size;
     }
     public int steps (int size) {
         return steps;
